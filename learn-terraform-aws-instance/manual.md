@@ -45,3 +45,8 @@ To override a variable on the commandline use this command:
 ```
 terraform apply -var "instance_name=YetAnotherName"
 ```
+
+View outputs with the following command:
+```
+terraform output <variable>
+```
