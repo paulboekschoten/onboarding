@@ -39,3 +39,9 @@ For manually managing the state you can use
 ```
 terraform state
 ```
+
+
+To override a variable on the commandline use this command:
+```
+terraform apply -var "instance_name=YetAnotherName"
+```
