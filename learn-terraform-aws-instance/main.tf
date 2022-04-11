@@ -1,4 +1,10 @@
 terraform {
+  cloud {
+    organization = "paulboekschoten-business"
+    workspaces {
+      name = "getting-started-aws"
+    }
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"

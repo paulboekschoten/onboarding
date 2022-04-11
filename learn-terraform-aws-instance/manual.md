@@ -50,3 +50,43 @@ View outputs with the following command:
 ```
 terraform output <variable>
 ```
+
+## Store remote state
+Retrieve the organisation id from your Terraform Cloud account.  
+
+Add the following code in the terraform block
+```json
+cloud {
+    organization = "paulboekschoten-business"
+    workspaces {
+      name = "getting-started-aws"
+    }
+  }
+```
+
+Login to terraform cloud with:
+```
+terraform login
+```
+This redirects you to a browser where you can copy the token.  
+Paste this on the CLI. 
+
+Run
+```
+terraform init
+```
+You will be prompted to migrate the current state, answer YES.  
+
+In your Terraform cloud account you will now see your workspace in your organisation.  
+
+Remove the local state file
+```
+rm terraform.tfstate
+```
+
+Add the AWS environment variables (Doormat) to your Terraform cloud workspace.  
+Push them with doormat CLI like this:
+```
+doormat aws --account support_terraform_dev tf-push --workspace getting-started-aws --organization paulboekschoten-business
+```
+Adding the variables in the cloud console by hand will probably end up with a copy paste error and leading to a 403 unauthorized error.  
