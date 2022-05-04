@@ -25,6 +25,8 @@ chmod 0600 on the pem file
 
 ### Create instance
 
+Note: Ubuntu 20.04 was used.  
+(Andrii mentioned there ware issues with Red Hat and Docker working out of the box.)  
 ![](media/2022-05-03-10-41-10.png)
 
 ![](media/2022-05-03-10-41-29.png)
