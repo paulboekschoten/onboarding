@@ -16,7 +16,7 @@ AWS reference architecture
 
 Instance types: [https://eu-west-3.console.aws.amazon.com/ec2/v2/home?region=eu-west-3#LaunchInstances:](https://eu-west-3.console.aws.amazon.com/ec2/v2/home?region=eu-west-3#LaunchInstances:)  
 
-Pick m5.xlarge  
+
 
 ### Create key pair
 ![](media/2022-05-03-10-38-51.png)
@@ -30,6 +30,7 @@ Note: Ubuntu 20.04 was used.
 ![](media/2022-05-03-10-41-10.png)
 
 ![](media/2022-05-03-10-41-29.png)
+Pick m5.xlarge  
 
 ![](media/2022-05-03-10-45-07.png)
 
