@@ -3,7 +3,8 @@
 [https://hashicorp.atlassian.net/wiki/spaces/tfsupport/pages/676792039/Terraform+Enterprise+Installation](https://hashicorp.atlassian.net/wiki/spaces/tfsupport/pages/676792039/Terraform+Enterprise+Installation)
 
 ## Replicated license
-
+I can't create a license, do not have the permissions.  
+Andrii provided one for me.  
 
 ## Create linux compute resource
 AWS - eu-west-3  
@@ -85,22 +86,33 @@ To create an alias for the replicated cli command run the following in your curr
   source /etc/replicated.alias
 ```
 
+Follow the URL provided.  
+
+Provide the domain created with the DNS record.  
+Click Use Self-Signed Cert.  
+
+Upload the Replicated license.  
+
+Choose Online installation type.  
+
+Enter a password for the Admin.  
+
+In the Settings menu, enter an Encryption password, and provide a disk mount location.  
+Click Save.  
+
+
+![](media/2022-05-03-16-17-25.png)
+
+Main app url:  
+[https://tfe-paul.tf-support.hashicorpdemo.com/](https://tfe-paul.tf-support.hashicorpdemo.com/)  
+
+
+
+
+---
 sometimes there are issues with networking which can result in 500 errors when visiting the UI.  
 replicated_network in some cases (depending from AWS region, used AI and etc) not providing correct address to bind  
 run:
 ```
 curl -sSL https://install.terraform.io/ptfe/stable | sudo bash -s disable-replicated-host-networking
 ```
-
-
-[https://tfe-paul.tf-support.hashicorpdemo.com:8800/](https://tfe-paul.tf-support.hashicorpdemo.com:8800/)  
-pwd:  
-Whatever123!  
-
-diskmount location:  
-/tmp/tfe  
-(for now)
-
-![](media/2022-05-03-16-17-25.png)
-
-https://tfe-paul.tf-support.hashicorpdemo.com/  
